@@ -44,7 +44,7 @@ export class App {
       description: 'API RESTful que simula un backend para pruebas y prototipos, utilizando JSONPlaceholder como fuente de datos.',
       githubLink: 'https://github.com/radiohead42/JSONPlaceholderAPI',
       tags: ['Angular', 'TypeScript', 'RxJS', 'Fake API'],
-      demoLink: ''
+      demoLink: 'https://brave-pebble-0b1538010.6.azurestaticapps.net'
     },
     {
       title: 'Dashboard Analítico',
