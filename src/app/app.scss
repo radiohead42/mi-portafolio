@@ -1,0 +1,288 @@
+/* =========================================
+   1. ANIMACIONES BASE (Keyframes)
+   ========================================= */
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes slideUpFade {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================================
+   2. ESTILOS GLOBALES
+   ========================================= */
+.portfolio-container {
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  color: #2d3748;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  /* Animación de entrada general */
+  animation: slideUpFade 0.8s ease-out forwards;
+}
+
+/* =========================================
+   3. HERO SECTION (Animada y Colorida)
+   ========================================= */
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+  /* Gradiente moderno y vibrante */
+  background: linear-gradient(-45deg, #FF3CAC, #784BA0, #2B86C5, #00d2ff);
+  background-size: 400% 400%;
+  /* Activamos la animación infinita del fondo */
+  animation: gradientBG 12s ease infinite;
+  color: white;
+  border-radius: 24px;
+  margin-bottom: 60px;
+  box-shadow: 0 20px 40px rgba(43, 134, 197, 0.3);
+}
+
+.hero h1 {
+  margin-bottom: 10px;
+  font-size: 3rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+.hero h2 {
+  font-weight: 400;
+  margin-bottom: 25px;
+  color: #e2e8f0;
+  letter-spacing: 1px;
+}
+
+.hero p {
+  max-width: 600px;
+  margin: 0 auto 35px;
+  line-height: 1.7;
+  font-size: 1.1rem;
+}
+
+.cta-button {
+  background: white;
+  color: #784BA0;
+  padding: 14px 32px;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 800;
+  font-size: 1.1rem;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  display: inline-block;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.cta-button:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  color: #FF3CAC;
+}
+
+/* =========================================
+   4. SECCIÓN TECNOLOGÍAS
+   ========================================= */
+.tech-section {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.tech-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.tech-badge {
+  background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 12px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 10px rgba(253, 160, 133, 0.3);
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+/* Colores alternos para los badges usando pseudo-selectores para que se vea más dinámico */
+.tech-badge:nth-child(even) {
+  background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%);
+  box-shadow: 0 4px 10px rgba(132, 250, 176, 0.3);
+  color: #1a365d;
+}
+
+.tech-badge:nth-child(3n) {
+  background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%);
+  box-shadow: 0 4px 10px rgba(161, 140, 209, 0.3);
+}
+
+.tech-badge:hover {
+  transform: translateY(-5px) rotate(3deg);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+}
+
+/* =========================================
+   5. SECCIÓN PROYECTOS
+   ========================================= */
+.projects-section h3 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2rem;
+  color: #2b6cb0;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+}
+
+.project-card {
+  border: none;
+  padding: 30px;
+  border-radius: 20px;
+  background: white;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border-top: 5px solid #2B86C5;
+}
+
+/* Animación en cadena para que las tarjetas carguen una después de otra */
+.project-card {
+  animation: slideUpFade 0.6s ease-out forwards;
+  opacity: 0;
+}
+.project-card:nth-child(1) { animation-delay: 0.2s; }
+.project-card:nth-child(2) { animation-delay: 0.4s; border-top-color: #FF3CAC; }
+
+.project-card:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+}
+
+.project-card h4 {
+  margin-top: 0;
+  color: #2d3748;
+  font-size: 1.4rem;
+}
+
+.project-card p {
+  flex-grow: 1;
+  color: #718096;
+  line-height: 1.6;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.tag {
+  font-size: 0.85rem;
+  background: #edf2f7;
+  color: #4a5568;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.project-card:hover .tag {
+  background: #e2e8f0;
+}
+
+.github-link {
+  text-decoration: none;
+  color: #2B86C5;
+  font-weight: 800;
+  margin-top: auto;
+  padding-top: 20px;
+  border-top: 1px solid #edf2f7;
+  transition: color 0.3s;
+}
+
+.project-card:nth-child(2) .github-link { color: #FF3CAC; }
+
+.github-link:hover {
+  color: #1a202c;
+}
+
+/* =========================================
+   6. FOOTER
+   ========================================= */
+footer {
+  text-align: center;
+  margin-top: 80px;
+  padding-top: 30px;
+  color: #a0aec0;
+  border-top: 1px solid #e2e8f0;
+  font-weight: 500;
+}
+
+/* =========================================
+   7. ENLACES Y BOTONES DE PROYECTO
+   ========================================= */
+.project-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  padding-top: 20px;
+  border-top: 1px solid #edf2f7;
+}
+
+.github-link {
+  text-decoration: none;
+  color: #4a5568;
+  font-weight: 700;
+  font-size: 0.95rem;
+  transition: color 0.3s;
+}
+
+.github-link:hover {
+  color: #1a202c;
+}
+
+/* El nuevo botón de proyecto desplegado */
+.demo-link {
+  text-decoration: none;
+  background: linear-gradient(135deg, #FF3CAC, #784BA0);
+  color: white;
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  box-shadow: 0 4px 10px rgba(120, 75, 160, 0.3);
+  transition: transform 0.2s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.2s;
+}
+
+.demo-link:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 6px 15px rgba(120, 75, 160, 0.4);
+  color: white;
+}
+
+/* Cambiamos el color del botón del segundo proyecto para que haga juego con su tarjeta */
+.project-card:nth-child(2) .demo-link {
+  background: linear-gradient(135deg, #2B86C5, #00d2ff);
+  box-shadow: 0 4px 10px rgba(43, 134, 197, 0.3);
+}
+
+.project-card:nth-child(2) .demo-link:hover {
+  box-shadow: 0 6px 15px rgba(43, 134, 197, 0.4);
+}
