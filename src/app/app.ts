@@ -44,14 +44,14 @@ export class App {
       description: 'API RESTful que simula un backend para pruebas y prototipos, utilizando JSONPlaceholder como fuente de datos.',
       githubLink: 'https://github.com/radiohead42/JSONPlaceholderAPI',
       tags: ['Angular', 'TypeScript', 'RxJS', 'Fake API'],
-      demoLink: 'https://github.com/radiohead42/JSONPlaceholderAPI'
+      demoLink: ''
     },
     {
       title: 'Dashboard Analítico',
       description: 'Panel de control con tablas interactivas usando Angular Material, incluyendo paginación, ordenamiento y filtrado en tiempo real.',
-      githubLink: 'https://github.com/tu-usuario/angular-dashboard',
+      githubLink: 'https://github.com/radiohead42/Dashboard-Angular',
       tags: ['Angular Material', 'TypeScript', 'Fake Store API'],
-      demoLink: 'https://github.com/radiohead42/Dashboard-Angular'
+      demoLink: ''
     }
   ];
 
